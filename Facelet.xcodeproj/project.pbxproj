@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		29BD7ECE1DB80E62003CD09D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BD7ECD1DB80E62003CD09D /* AppDelegate.swift */; };
-		29BD7ED01DB80E62003CD09D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BD7ECF1DB80E62003CD09D /* ViewController.swift */; };
+		29BD7ED01DB80E62003CD09D /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BD7ECF1DB80E62003CD09D /* FaceViewController.swift */; };
 		29BD7ED31DB80E62003CD09D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BD7ED11DB80E62003CD09D /* Main.storyboard */; };
 		29BD7ED51DB80E62003CD09D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29BD7ED41DB80E62003CD09D /* Assets.xcassets */; };
 		29BD7ED81DB80E62003CD09D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BD7ED61DB80E62003CD09D /* LaunchScreen.storyboard */; };
+		29BD7EE11DB80FAA003CD09D /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BD7EE01DB80FAA003CD09D /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29BD7ECA1DB80E62003CD09D /* Facelet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facelet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BD7ECD1DB80E62003CD09D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29BD7ECF1DB80E62003CD09D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29BD7ECF1DB80E62003CD09D /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		29BD7ED21DB80E62003CD09D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29BD7ED41DB80E62003CD09D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29BD7ED71DB80E62003CD09D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29BD7ED91DB80E62003CD09D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29BD7EE01DB80FAA003CD09D /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceView.swift; path = ../FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		29BD7ECC1DB80E62003CD09D /* Facelet */ = {
 			isa = PBXGroup;
 			children = (
-				29BD7ECD1DB80E62003CD09D /* AppDelegate.swift */,
-				29BD7ECF1DB80E62003CD09D /* ViewController.swift */,
+				29BD7EDF1DB80E95003CD09D /* SupportingFiles */,
+				29BD7ECF1DB80E62003CD09D /* FaceViewController.swift */,
+				29BD7EE01DB80FAA003CD09D /* FaceView.swift */,
 				29BD7ED11DB80E62003CD09D /* Main.storyboard */,
+			);
+			path = Facelet;
+			sourceTree = "<group>";
+		};
+		29BD7EDF1DB80E95003CD09D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				29BD7ECD1DB80E62003CD09D /* AppDelegate.swift */,
 				29BD7ED41DB80E62003CD09D /* Assets.xcassets */,
 				29BD7ED61DB80E62003CD09D /* LaunchScreen.storyboard */,
 				29BD7ED91DB80E62003CD09D /* Info.plist */,
 			);
-			path = Facelet;
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29BD7ED01DB80E62003CD09D /* ViewController.swift in Sources */,
+				29BD7ED01DB80E62003CD09D /* FaceViewController.swift in Sources */,
 				29BD7ECE1DB80E62003CD09D /* AppDelegate.swift in Sources */,
+				29BD7EE11DB80FAA003CD09D /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
