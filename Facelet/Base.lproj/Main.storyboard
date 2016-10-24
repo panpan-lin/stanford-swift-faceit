@@ -44,6 +44,9 @@
                             <constraint firstItem="xFF-mh-N4F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yWZ-XG-xWU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="xFF-mh-N4F" id="uly-Jm-JZU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
