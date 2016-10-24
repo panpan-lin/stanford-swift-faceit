@@ -8,17 +8,21 @@
 
 import UIKit
 
+@IBDesignable
 class FaceView: UIView {
     
-    var scale: CGFloat = 0.90
-    
-    var mouthCurvature: Double = 0.0 // 1 full smile, -1 full frown
-    var eyesOpen: Bool = true
-    var eyeBrowTilt: Double = 0.0 // -1 full furrow, 1 fully relaxed
-    
-    var color: UIColor = UIColor.blue
-    
-    var lineWidth: CGFloat = 5.0
+    @IBInspectable
+    var scale: CGFloat = 0.90 { didSet {setNeedsDisplay() } }
+    @IBInspectable
+    var mouthCurvature: Double = 0.0  { didSet {setNeedsDisplay() } } // 1 full smile, -1 full frown
+    @IBInspectable
+    var eyesOpen: Bool = true { didSet {setNeedsDisplay() } }
+    @IBInspectable
+    var eyeBrowTilt: Double = 0.0 { didSet {setNeedsDisplay() } } // -1 full furrow, 1 fully relaxed
+    @IBInspectable
+    var color: UIColor = UIColor.blue { didSet {setNeedsDisplay() } }
+    @IBInspectable
+    var lineWidth: CGFloat = 5.0 { didSet {setNeedsDisplay() } }
     
     // need to be a calculated value here instead of just using
     // min(bounds.size.width, bounds.size.height)
