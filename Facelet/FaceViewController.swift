@@ -20,6 +20,7 @@ class FaceViewController: UIViewController {
         }
     }
     
+    // controller handles the recognizer and changes the UI
     @IBOutlet weak var faceView: FaceView! {
         // update the view when our view is hooked up the first time,
         // shortly after iOS comes along and hook up our view
@@ -38,6 +39,16 @@ class FaceViewController: UIViewController {
             faceView.addGestureRecognizer(sadderSwipeGestureRecognizer)
             
             updateUI()
+        }
+    }
+    
+    @IBAction func toggleEyes(_ recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .ended {
+            switch expression.eyes {
+            case .Open: expression.eyes = .Closed
+            case .Closed: expression.eyes = .Open
+            case .Squinting: break
+            }
         }
     }
     
