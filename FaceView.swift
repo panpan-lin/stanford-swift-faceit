@@ -24,6 +24,16 @@ class FaceView: UIView {
     @IBInspectable
     var lineWidth: CGFloat = 5.0 { didSet {setNeedsDisplay() } }
     
+    func changeScale(recognizer: UIPinchGestureRecognizer)  {
+        switch recognizer.state {
+        case .changed, .ended:
+            scale *= recognizer.scale
+            recognizer.scale = 1.0
+        default:
+            break
+        }
+    }
+    
     // need to be a calculated value here instead of just using
     // min(bounds.size.width, bounds.size.height)
     // because this is before draw(_ rect) is called!

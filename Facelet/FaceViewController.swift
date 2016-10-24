@@ -24,8 +24,29 @@ class FaceViewController: UIViewController {
         // update the view when our view is hooked up the first time,
         // shortly after iOS comes along and hook up our view
         didSet {
+            faceView.addGestureRecognizer(UIPinchGestureRecognizer(
+                    target: faceView, action: #selector(FaceView.changeScale(recognizer:))
+            ))
+            
+            // swip gesture needs to be configured
+            let happierSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(FaceViewController.increaseHappiness))
+            happierSwipeGestureRecognizer.direction = .up
+            faceView.addGestureRecognizer(happierSwipeGestureRecognizer)
+            
+            let sadderSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(FaceViewController.decreaseHappiness))
+            sadderSwipeGestureRecognizer.direction = .down
+            faceView.addGestureRecognizer(sadderSwipeGestureRecognizer)
+            
             updateUI()
         }
+    }
+    
+    func increaseHappiness() {
+        expression.mouth = expression.mouth.happierMouth()
+    }
+    
+    func decreaseHappiness() {
+        expression.mouth = expression.mouth.sadderMouth()
     }
     
     // a dictionary
