@@ -67,7 +67,7 @@
             <objects>
                 <splitViewController id="q8C-A4-9EK" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="Kaw-3S-goi" kind="relationship" relationship="masterViewController" id="0R2-XC-sKb"/>
+                        <segue destination="pUY-gh-Tx4" kind="relationship" relationship="masterViewController" id="0R2-XC-sKb"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="G8e-gj-OGZ"/>
                     </connections>
                 </splitViewController>
@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="-1038" y="89"/>
         </scene>
-        <!--Item-->
+        <!--Emotions View Controller-->
         <scene sceneID="jdZ-tr-h7f">
             <objects>
                 <viewController id="Kaw-3S-goi" customClass="EmotionsViewController" customModule="Facelet" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,11 +126,30 @@
                             <constraint firstItem="A8j-Zr-exE" firstAttribute="centerY" secondItem="Zur-gb-tTs" secondAttribute="centerY" id="CDX-Ry-TTx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wpe-L9-Vi4"/>
+                    <navigationItem key="navigationItem" id="lqd-J4-cJ0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYF-94-0Pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-202" y="-332"/>
+            <point key="canvasLocation" x="736.79999999999995" y="-332.38380809595208"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="aT2-SL-EPS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pUY-gh-Tx4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wpe-L9-Vi4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JBN-xy-iVp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kaw-3S-goi" kind="relationship" relationship="rootViewController" id="Dff-hC-N4o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2n-m4-RVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202.40000000000001" y="-332.38380809595208"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
